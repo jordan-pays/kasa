@@ -1,0 +1,26 @@
+.tag_container{
+    width: 84px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag_text{
+    font-size: 10px;
+    font-weight: 500;
+    color: #FFFFFF
+}
+
+@media (min-width : 768px) {
+    .tag_container{
+        width: 115px;
+        height: 25px;
+    }
+    .tag_text {
+        font-size: 14px;
+    }
+  }
+  

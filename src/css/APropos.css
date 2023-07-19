@@ -1,0 +1,15 @@
+.apropos_banniere{
+    height: 223px;
+    border-radius: 10px;
+    background-image: url("../assets/apropos_img.png");
+    background-color: #00000030;
+    background-size:cover;
+    background-blend-mode:darken;
+    background-repeat:no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background-position: center;
+}

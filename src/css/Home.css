@@ -1,0 +1,46 @@
+.home_banniere {
+    height: 111px;
+    border-radius: 25px;
+    background-image: url("../assets/home_img.png");
+    background-color: #00000030;
+    background-size:cover;
+    background-blend-mode:darken;
+    background-repeat:no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background-position: center;
+}
+
+.home_banniere_title {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+.home_liste {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (min-width : 768px) {
+    .home_banniere{
+        height: 223px;
+    }
+    .home_banniere_title{
+        font-size: 48px;
+    }
+}
+
+@media (min-width : 1003px) {
+    .home_liste{
+        justify-content:flex-start;
+        gap: 60px;
+    }
+  }
