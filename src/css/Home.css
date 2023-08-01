@@ -1,6 +1,5 @@
 .home_banniere {
     height: 111px;
-    border-radius: 25px;
     background-image: url("../assets/home_img.png");
     background-color: #00000030;
     background-size:cover;
@@ -12,6 +11,8 @@
     justify-content: center;
     margin-bottom: 22px;
     background-position: center;
+    padding: 0px 5px;
+    text-align: center;
 }
 
 .home_banniere_title {
