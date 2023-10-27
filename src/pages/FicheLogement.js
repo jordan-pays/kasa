@@ -4,7 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { getAppartemmentById } from '../services/ServicesAppartement';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
-
 import '../css/FicheLogement.css'
 import DropDown from '../components/DropDown';
 
