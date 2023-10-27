@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Carousel from '../components/Carousel'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getAppartemmentById } from '../services/ServicesAppartement';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
@@ -10,6 +10,7 @@ import DropDown from '../components/DropDown';
 
 export default function FicheLogement() {
   const {id} = useParams();
+  const navigate = useNavigate()
   const [infoAppart, setInfoAppart] = useState({
     id: "",
     title: "",
@@ -31,7 +32,7 @@ export default function FicheLogement() {
     if(results){
       setInfoAppart(results)
     }else{
-      window.location.href = "/error"
+      navigate("/error")
     }
   }
 

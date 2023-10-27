@@ -1,29 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import '../css/Rating.css'
+import "../css/Rating.css";
+import { useEffect } from "react";
 
-export default function Rating({nbStars}) {
-  return (
-    <div className='stars_container'>
-			<div className={`stars_item ${nbStars>=1 ? "stars_item_actif" : ""}`}> 
-				<i className="fa-solid fa-star"></i>
-			</div>
+export default function Rating({ nbStars }) {
+  const [ratings, setRatings] = useState([]);
 
-			<div className={`stars_item ${nbStars>=2 ? "stars_item_actif" : ""}`}> 
-				<i className="fa-solid fa-star"></i>
-			</div>
+  function createRating() {
+    const ratingsConstruct = [];
+    for (let index = 1; index <= 5; index++) {
+      ratingsConstruct.push(
+        <div
+          className={`stars_item ${nbStars >= index ? "stars_item_actif" : ""}`}
+          key={index}
+        >
+          <i className="fa-solid fa-star"></i>
+        </div>
+      );
+    }
+    setRatings(ratingsConstruct);
+  }
 
-			<div className={`stars_item ${nbStars>=3 ? "stars_item_actif" : ""}`}> 
-				<i className="fa-solid fa-star"></i>
-			</div>
+  useEffect(() => {
+    if (nbStars) {
+      createRating();
+    }
+  }, [nbStars]);
 
-			<div className={`stars_item ${nbStars>=4 ? "stars_item_actif" : ""}`}> 
-				<i className="fa-solid fa-star"></i>
-			</div>
-
-			<div className={`stars_item ${nbStars >=5 ? "stars_item_actif" : ""}`}> 
-				<i className="fa-solid fa-star"></i>
-			</div>
-		</div>
-  )
+  return <div className="stars_container">{ratings?.map((item) => item)}</div>;
 }

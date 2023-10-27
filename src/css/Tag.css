@@ -20,7 +20,17 @@
         height: 25px;
     }
     .tag_text {
-        font-size: 14px;
+        font-size: 12px;
     }
   }
   
+
+  @media (min-width : 1240px) {
+    .tag_container{
+        width: 130px;
+        height: 25px;
+    }
+    .tag_text {
+        font-size: 14px;
+    }
+  }
